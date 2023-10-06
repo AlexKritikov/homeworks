@@ -8,7 +8,7 @@ if __name__ == '__main__':
 # Sample String: 'my'#
 # Expected Result : 'mymy'
 # Sample String: 'x'
-# Expected Result: Empty String
+# Expected Result: Empty String.
 #
 # Tips:#
 # Use built-in function len() on an input string
