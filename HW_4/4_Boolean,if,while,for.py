@@ -1,6 +1,6 @@
 if __name__ == '__main__':
 
-# Task 1. String manipulation
+# Task 1. String manipulation.
 # Write a Python program to get a string made of the first 2 and the last 2 chars from a given string.
 # If the string length is less than 2, return instead of the empty string.
 # Sample String: 'helloworld'#
