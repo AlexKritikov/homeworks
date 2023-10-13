@@ -37,7 +37,6 @@ tree(5)
 # # Try running your module on itself: e.g., test("mymod.py"). Note that the test opens the file twice;
 # if you’re feeling ambitious, you may be able to improve this by passing an open file object into the two count
 # functions (hint: file.seek(0) is a file rewind).
-
 # 'C:\\Users\\alexkritikov\\Desktop\\Treasure_Island.txt'
 def count_lines(name):
     return (len(open(name,'r').readlines()))
