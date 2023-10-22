@@ -4,8 +4,8 @@
 # instead of IndexError?
 if __name__ == '__main__':
     def oops():
-        T1_tuple=(1,2,3,4,5)
-        T1_variable=T1_tuple[5]
+        t1_tuple=(1,2,3,4,5)
+        t1_variable=t1_tuple[5]
 
     def catch ():
         try:
