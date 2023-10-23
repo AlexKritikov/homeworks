@@ -44,7 +44,7 @@ if __name__ == '__main__':
 # type_: str
 # contains: [] - list of symbols that an argument should contain
 # If some of the rules' checks returns False, the function should return False and print the reason it failed;
-# otherwise, return the result.
+# otherwise, return the result
 
     def arg_rules(type_: type, max_length: int, contains: list):
         def check_arguments (function_t3):
