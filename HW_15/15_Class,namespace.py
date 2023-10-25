@@ -43,55 +43,50 @@ if __name__ == '__main__':
     class TVController():
         def __init__(self,CHANNELS:list):
             self.channels=CHANNELS
-            channel_number = 0
+            self.channel_number = 0
 
         def first_channel(self):
-            global channel_number
-            channel_number = 0
-            return self.channels[channel_number]
+            self.channel_number = 0
+            return self.channels[self.channel_number]
 
         def last_channel(self):
-            global channel_number
-            channel_number = len(self.channels) - 1
-            return self.channels[channel_number]
+            self.channel_number = len(self.channels) - 1
+            return self.channels[self.channel_number]
 
         def turn_channel(self,N: int):
-            global channel_number
             if N > len(self.channels):
                 raise ValueError("We don't have so many channels!")
             else:
-                channel_number = N - 1
-                return self.channels[channel_number]
+                self.channel_number = N - 1
+                return self.channels[self.channel_number]
 
         def next_channel(self):
-            global channel_number
-            if channel_number == len(self.channels) - 1:
+            if self.channel_number == len(self.channels) - 1:
                 return self.first_channel()
             else:
-                channel_number += 1
-                return self.channels[channel_number]
+                self.channel_number += 1
+                return self.channels[self.channel_number]
 
         def previous_channel(self):
-            global channel_number
-            if channel_number == 0:
+            if self.channel_number == 0:
                 return self.last_channel()
             else:
-                channel_number -= 1
-                return self.channels[channel_number]
+                self.channel_number -= 1
+                return self.channels[self.channel_number]
 
         def current_channel(self):
-            global channel_number
-            return (self.channels[channel_number])
+            return self.channels[self.channel_number]
 
         def exists(self,N):
             if isinstance(N, int) == True and 0 < N <= len(self.channels):
-                return('Yes')
+                return ('Yes')
             elif isinstance(N, str) == True and N in self.channels:
-                return('Yes')
+                return ('Yes')
             else:
-                return('No')
+                return ('No')
 
-    controller = TVController(CHANNELS)
+
+
 
 
 
