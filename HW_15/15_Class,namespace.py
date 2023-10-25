@@ -66,8 +66,7 @@ if __name__ == '__main__':
         def next_channel(self):
             global channel_number
             if channel_number == len(self.channels) - 1:
-                channel_number = 0
-                return self.channels[channel_number]
+                return self.first_channel()
             else:
                 channel_number += 1
                 return self.channels[channel_number]
@@ -75,8 +74,7 @@ if __name__ == '__main__':
         def previous_channel(self):
             global channel_number
             if channel_number == 0:
-                channel_number = len(self.channels) - 1
-                return self.channels[channel_number]
+                return self.last_channel()
             else:
                 channel_number -= 1
                 return self.channels[channel_number]
@@ -94,6 +92,8 @@ if __name__ == '__main__':
                 return('No')
 
     controller = TVController(CHANNELS)
+
+
 
 
 
