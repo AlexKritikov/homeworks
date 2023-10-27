@@ -140,7 +140,7 @@ if __name__ == '__main__':
             return self.income
 
         def get_all_products(self):
-            print(list(filter(lambda i: i['amount'] > 0, self.warehouse)))
+            return(list(filter(lambda i: i['amount'] > 0, self.warehouse)))
 
         def get_product_info(self,product_name):
             self.product_name=product_name
