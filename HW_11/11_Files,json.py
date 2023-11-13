@@ -43,30 +43,30 @@ if __name__ == '__main__':
         user_first_name = input('Enter searching first name please')
         for i in phonebook_dict['items']:
             if i['first_name'] == user_first_name:
-                return (i)
+                print(i)
     def search_last_name(**kwargs):#2
         user_last_name = input('Enter searching last name please')
         for i in phonebook_dict['items']:
             if i['last_name'] == user_last_name:
-                return (i)
+                print (i)
 
     def search_full_name(**kwargs):#3
         user_full_name = input('Enter searching full name please')
         for i in phonebook_dict['items']:
             if i['full_name'] == ' '.join(user_full_name.split()):
-                return (i)
+                print (i)
 
     def search_telephone_number(**kwargs):#4
         user_telephone_number = input('Enter searching telephone number please')
         for i in phonebook_dict['items']:
             if i['telephone_number'] == user_telephone_number:
-                return(i)
+                print(i)
 
     def search_city(**kwargs):#5
         user_city = input('Enter searching city please')
         for i in phonebook_dict['items']:
             if i['city'] == user_city:
-                return (i)
+                print (i)
 
 
     def delete_telephone_number(**kwargs):#6
@@ -159,5 +159,5 @@ else:
 
 
 
-
+    search_telephone_number()
 
