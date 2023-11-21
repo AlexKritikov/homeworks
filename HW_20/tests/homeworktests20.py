@@ -183,6 +183,5 @@ class TaskTest2(TestCase):
                                            'full_name': 'Valentin Sergijovich Karkavin',
                                            'telephone_number': '0959119354', 'city': 'Mariupol'})
 
-
 if __name__ == '__main__':
     main()
