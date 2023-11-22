@@ -2,11 +2,10 @@
 # Create your own class, which can behave like a built-in function 'open'. Also, you need to extend its functionality
 # with counter and logging. Pay special attention to the implementation of '__exit__' method, which has to cover all
 # the requirements to context managers mentioned here
-from logging import FileHandler
+
 from datetime import datetime
-import time
 from unittest import TestCase
-import os
+
 class Opener:
     counter=0
     def __init__(self,name,mode='w' ):
