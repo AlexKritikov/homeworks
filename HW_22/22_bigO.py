@@ -24,7 +24,7 @@ def question2(n: int) -> int:# answer 2 O(1)
 		n **= 3
 	return n
 
-def question3(first_list: List[int], second_list: List[int])-> List[int]:#3 O(n^2)
+def question3(first_list: List[int], second_list: List[int])-> List[int]:# answer 3 O(n^2)
    temp: List[int] = first_list[:]
    for el_second_list in second_list:
       flag = False
@@ -37,14 +37,14 @@ def question3(first_list: List[int], second_list: List[int])-> List[int]:#3 O(n^
    return temp
 
 
-def question4(input_list: List[int]) -> int:#4 O(n)
+def question4(input_list: List[int]) -> int:# answer 4 O(n)
   res: int = 0
   for el in input_list:
     if el > res:
       res = el
   return res
 
-def question5(n: int) -> List[Tuple[int, int]]:#5 O(n^2)
+def question5(n: int) -> List[Tuple[int, int]]:# answer 5 O(n^2)
     res: List[Tuple[int, int]] = []
     for i in range(n):
         for j in range(n):
@@ -52,7 +52,7 @@ def question5(n: int) -> List[Tuple[int, int]]:#5 O(n^2)
     return res
 
 
-def question6(n: int) -> int:#6 O(log n)
+def question6(n: int) -> int:# answer 6 O(log n)
     while n > 1:
         n /= 2
     return n
