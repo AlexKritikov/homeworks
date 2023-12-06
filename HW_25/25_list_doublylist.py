@@ -126,7 +126,7 @@ if __name__ == '__main__':
                     current_node=current_node.get_next()
             print(output)
 
-# Task 2. Implement a stack using a singly linked list.
+# Task 2. Implement a stack using a singly linked list
     class Stack(UnsortedList):
         def stack_in(self,data):
             self.append(data)
