@@ -12,7 +12,7 @@
 from typing import List, Tuple
 
 
-def question1(first_list: List[int], second_list: List[int]) -> List[int]:#answer 1 O(n)
+def question1(first_list: List[int], second_list: List[int]) -> List[int]:#answer 1 O(n).
     res: List[int] = []
     for el_first_list in first_list:
         if el_first_list in second_list:
