@@ -35,11 +35,12 @@ if __name__ == '__main__':
 # All 3 classes must have a readable __repr__ and __str__ methods.
 # Also, the book class should have a class variable which holds the amount of all existing books
     class Author:
-        books = []
+
         def __init__(self,name, country, birthday):
             self.name = name
             self.country = country
             self.birthday = birthday
+            self.books = []
         def __repr__(self):
             return self.name
         def __str__(self):
@@ -61,19 +62,19 @@ if __name__ == '__main__':
             self.library_book = dict()
             self.library_book['name'] = self.name
             self.library_book['year'] = self.year
-            self.library_book['author'] = self.author.name
+            self.library_book['author'] = self.author
             self.books.append(self.library_book)
 
-            if len(Author.books)==0:
-                Author.books.append(self.library_book)
+            if len(self.author.books)==0:
+                self.author.books.append(self.library_book)
                 Book.books_exist+=1
             else:
                 self.counter_books=0
-                for i in Author.books:
-                    if self.name == i['name'] and self.author.name == i['author'] :
+                for i in self.author.books:
+                    if self.name == i['name'] and self.author == i['author'] :
                         self.counter_books+=1
                 if self.counter_books==0:
-                    Author.books.append(self.library_book)
+                    self.author.books.append(self.library_book)
                     Book.books_exist += 1
 
             if len(self.authors) == 0:
@@ -92,12 +93,13 @@ if __name__ == '__main__':
             self.author = author
             self.counter_author = 0
             for i in self.authors:
-                if self.author.name == i:
+                if self.author == i:
                     self.counter_author+=1
             if self.counter_author==0:
+                print(self.counter_author)
                 return "We don't have such author in our library"
             else:
-                return [i['name'] for i in self.books if i['author']==self.author.name]
+                return [i['name'] for i in self.books if i['author']==self.author]
 
         def group_by_year(self,year: int):
             self.year = year
@@ -106,7 +108,7 @@ if __name__ == '__main__':
             else:
                 return [i['name'] for i in self.books if i['year'] == self.year]
 
-    class Book(Author):
+    class Book():
         books_exist=0
         def __init__(self,name:str, year:int, author:Author):
             self.name = name
